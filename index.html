@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Tasarım</title>
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/menu-boxed.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      /* HEADER CSS BASLANGIICI*/
+      .container-1 {
+        width: 100%;
+        height: 100%;
+        background-color: #151b28;
+      }
+
+      .header {
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+        padding-left: 300px;
+        padding-right: 300px;
+        height: 10vh;
+        align-items: center;
+      }
+
+      .menu-icon {
+        display: none;
+      }
+
+      .menu a {
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .butonlar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .butonlar a {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-decoration: none;
+      }
+
+      .butonlar button {
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: blue;
+        color: white;
+        border-radius: 3px;
+        border: 0px solid #151b28;
+        width: 80px;
+        padding: 10px;
+      }
+      /* HEADER CSS BİTİSİ*/
+
+      /* PART 1 YAZILARIN CSS BASLANGIICI*/
+
+      .part {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-left: 200px;
+        padding-right: 200px;
+      }
+
+      .part h1 {
+        font-weight: 900;
+        font-size: 40px;
+        color: white;
+      }
+      .part p {
+        font-weight: 500;
+        font-size: 18px;
+        color: #a5acba;
+      }
+
+      hr {
+        width: 100%;
+      }
+      /* PART 1 YAZILARIN CSS BİTİSİ*/
+
+      /* TAB (MONTH/YEAR) YAZILARIN CSS BASLANGICI*/
+      .tab-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .tab {
+        background-color: #2e3545;
+        width: 300px;
+        height: 55px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .tab button {
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #333b48;
+        color: white;
+        border-radius: 3px;
+        border: 0px solid #151b28;
+        width: 150px;
+        padding: 10px;
+      }
+
+      .tab a {
+        margin-right: 10px;
+        color: #a5acba;
+        width: 150px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* TAB (MONTH/YEAR) YAZILARIN CSS BİTİSİ*/
+
+      /* PLANLAR KISMI YAZILARIN CSS BASLANGICI*/
+      .plan-div {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 20px;
+      }
+
+      .plan {
+        background-color: #2e3545;
+        border-radius: 20px;
+        padding: 20px;
+      }
+
+      .price h1 {
+        color: white;
+        display: inline;
+        font-size: 50px;
+      }
+
+      .price p {
+        color: white;
+        display: inline;
+      }
+
+      /* PLANLAR KISMI YAZILARIN CSS CSS BİTİSİ*/
+
+      #user-card div {
+        background-color: #151b28;
+        color: white;
+      }
+
+    
+
+
+      @media (max-width: 650px) {
+        .header {
+          display: flex;
+          justify-content: space-between;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        .part {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        .menu {
+          display: none;
+        }
+
+        .butonlar a {
+          display: none;
+        }
+
+        .butonlar button {
+          display: none;
+        }
+
+        .menu-icon {
+          display: block;
+          color: white;
+        }
+
+        .plan-div {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-1">
+      <div class="header-container">
+        <div class="header">
+          <div class="logo">
+            <img
+              src="https://esmomerr.github.io/Pricing-WebSite-Responsive/assets/img/Company%20Logo.svg"
+              alt=""
+            />
+          </div>
+          <div class="menu">
+            <a href="#">Home</a>
+            <a href="our-product">Our Products</a>
+            <a href="resources">Resources</a>
+            <a href="contact">Contacts</a>
+          </div>
+          <div class="butonlar">
+            <a href="#">Sign Up</a>
+            <button>Login</button>
+          </div>
+          <div class="menu-icon"><i class="gg-menu-boxed"></i></div>
+        </div>
+      </div>
+      <div class="part">
+        <h1>
+          Hype got you here.<br />
+          Stay for the support.
+        </h1>
+        <hr />
+        <p>
+          We've been told it is possible to revolutionize the payment industry.
+          We have not reinvented the wheel, we decided to build upon it -
+          successfully.
+        </p>
+      </div>
+      <div class="tab-container">
+        <div class="tab">
+          <button>Monthly</button>
+          <a>Yearly</a>
+        </div>
+      </div>
+      <div class="plan-div" id="plan-div">
+        <!-- JavaScript ile oluşturulan planların buraya ekleneceği alan -->
+      </div>
+    </div>
+
+    <div class="user-card" id="user-card">
+      <!-- JavaScript ile oluşturulan planların buraya ekleneceği alan -->
+    </div>
+    <script src="./fetch.js"></script>
+  </body>
+</html>
